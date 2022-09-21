@@ -7,7 +7,7 @@ $resultado = $adminC->IngresoC();
 <br> <!-- Vistas/Modulos/ingreso.php -->
 
 <div class="row">
-<div class="col s6 push-s3">
+<div class="col s6 push-s3"> 
 <form method="post" action="" >
 	<div>
     <h4 class="deep-purple-text ">INGRESAR</h4>
