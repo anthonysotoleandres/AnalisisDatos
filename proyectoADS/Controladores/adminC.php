@@ -12,7 +12,6 @@ class AdminC{
                             "usuario"=>$_POST["usuarioI"], 
                             "contraseña"=>$_POST["claveI"],
                             "perfil"=>$_POST["perfilI"]);
-
             //$tablaBD = "usuarios";
             $resultado = $this->adminM->IngresoM($datosC);
             //$rows = $pagina->fetch_array(MYSQLI_ASSOC);

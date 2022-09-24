@@ -5,8 +5,11 @@ class perfilC {
     }
     //mostrar perfil de usuario
     public function mostrarPerfilC(){
-        $resultado = $this->perfilM->mostrarPerfilM();
-        return $resultado;
+
+            $resultado = $this->perfilM->mostrarPerfilM();
+            return $resultado;
+        
+
     }
 
     //mostrar nombre en el tablon

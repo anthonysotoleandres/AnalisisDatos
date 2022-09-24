@@ -3,7 +3,8 @@ require_once "conexionBD.php";
 
 class perfilM extends ConexionBD{
     function __construct(){
-        $this->tablaBD = 'usuarios';
+        $this->tablaBD = 'administrador';
+        $this->tablaBD1 = 'socio';
     }
 
    public function registrarTareasM($datosC){
@@ -23,12 +24,29 @@ class perfilM extends ConexionBD{
     // mostrar perfil de usuario
     public function mostrarPerfilM(){
         $cBD = $this->conectarBD();
-        $iduser=$_SESSION['Ingreso'];
-        $query = "SELECT *
-                FROM $this->tablaBD where id_usuario =$iduser ";
-        $result = $cBD->query($query);
-        return $result;
+
+            $iduser=$_SESSION['Ingreso'];
+            $query = "SELECT *
+                    FROM $this->tablaBD where idadministrador =$iduser ";
+            $result = $cBD->query($query);
+            return $result;
+
     }
+    // mostrar perfil de socios
+    public function mostrarPerfilM1(){
+        $cBD = $this->conectarBD();
+                 
+            $iduser=$_SESSION['Ingreso'];
+            $query = "SELECT *
+                    FROM $this->tablaBD1 where idsocio =$iduser ";
+            $result = $cBD->query($query);
+            return $result;
+
+    }
+
+
+
+
     // mostrar nombre para tablon
     public function mostrarNombreM(){
         $cBD = $this->conectarBD();

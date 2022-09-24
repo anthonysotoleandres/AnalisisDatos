@@ -33,7 +33,7 @@ class registrarM extends ConexionBD{
         $password = password_hash($pw_temp, PASSWORD_DEFAULT);
 
         $query = "INSERT INTO $this->tablaBD VALUES 
-            (NULL,'$nombre','$apellido',null,null,null,null,null,null,1,'$username','$password','$perfil')";
+            (NULL,'$nombre','$apellido','$username','$password',null,null,null,null,null,null,1,'$perfil')";
 
         $result = $cBD->query($query);
         return $result;
