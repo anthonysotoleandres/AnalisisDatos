@@ -7,30 +7,35 @@ $tareasC = new registrarC();
 $tareas= $tareasC->mostrarUsuario1C();
 ?>
 <div class="row">
-<div class="col s10 push-s1">
+<div class="text-center">
 <div class="container">
+<br>
 <h4 class="purple-text text-accent-3">Registrar Pasaje </h4>
 
 <form method="post" action="" id ="forregistrar">
-    <div>
+<div class="row g-4">
+	<div class="col-sm-6">
+		<label for="firstName" class="form-label">Precio de la ruta 1</label>
+		<input class="form-control"type="number" placeholder="Precio de ruta 1" name="precio1RP" required>
+	</div>
+	<div class="col-sm-6">
+		<label for="firstName" class="form-label">Precio de la ruta 2</label>
+		<input class="form-control"type="number" placeholder="Precio de ruta 2" name="precio2RP" required>
+	</div>
+    <div class="center w-auto m-auto ">
+	<br>	
 	<h5 class="deep-purple-text text-lighten-1">Administrador</h5>
-        <select name="socioRP" class="browser-default blue lighten-4 ">
+        <select name="socioRP" class="form-select" aria-label="Default select example">
 
         <?php foreach($tareas as $tarea): ?>
             <option value=<?=$tarea['idadministrador']?> ><span><?=$tarea['nombre']?></span></option>
          <?php endforeach; ?>
         </select>
 	</div>
-	<div>
-		<input type="text" placeholder="Precio de ruta 1" name="precio1RP" required>
-	</div>
-	<div>
-		<input type="text" placeholder="Precio de ruta 2" name="precio2RP" required>
-	</div>
-	<div>
 
 
-	<button class="btn waves-effect waves-light" type="submit" name="action">Registrar
+	<div>
+	<button class="w-auto m-3 btn btn btn-outline-primary btn-sm " type="submit" name="action">Registrar
             	</button>
 	</div>
 </form>

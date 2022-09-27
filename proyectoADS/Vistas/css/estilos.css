@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap');
-	*{
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-		font-family: 'Montserrat Alternates', sans-serif;
-	}
 
+nav{
+	position:relative;
+	margin:auto;
+	width:100%;
+	height:auto;
+	background:gray;
+}
 
 	/*Estilos para el encabezado*/
 	.header{
@@ -15,7 +15,7 @@
 		top: 0;left: 0;
 	}
 	.container{
-		width: 90%;
+		width: 100%;
 		max-width: 1200px;
 		margin: auto;
 	}
@@ -34,10 +34,7 @@
 		font-size: 22px;
 		margin-left: 10px;
 	}
-	.container .menu{
-		float: right;
-		line-height: 100px;
-	}
+
 	.container .menu a{
 		display: inline-block;
 		padding: 15px;
@@ -109,3 +106,7 @@
 		font-size: 18px;
 	}
 	/*Fin de Menù lateral*/
+
+.container1{
+    color:red;
+}

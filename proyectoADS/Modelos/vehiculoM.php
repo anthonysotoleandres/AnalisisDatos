@@ -4,6 +4,7 @@ require_once "conexionBD.php";
 class vehiculoM extends ConexionBD{
     function __construct(){
         $this->tablaBD = 'vehiculos';
+        $this->tablaBD1 = 'socio';
     }
 
     public function registrarVehiculoM($datosC){
@@ -21,4 +22,19 @@ class vehiculoM extends ConexionBD{
         $result = $cBD->query($query);
         return $result;
     }
+
+// mostrar VEHICULOS
+
+public function mostrarVehiculoM(){
+    $cBD = $this->conectarBD();  
+    $iduser=$_SESSION['Ingreso'];
+    $query = "SELECT placa,color,marca,modelo,tipo_vehiculo, socio.nombre
+            FROM $this->tablaBD INNER JOIN $this->tablaBD1
+            on socio_idsocio= idsocio";
+    $result = $cBD->query($query);
+    return $result;
+}
+
+
+
 }

@@ -7,7 +7,7 @@ class registrarM extends ConexionBD{
         $this->tablaBD1= 'administrador';
         $this->tablaBD2= 'chofer';
     }
-
+// REGISTRAR SOCIOS
     public function registrarUsuariosM($datosC){
         $cBD = $this->conectarBD();
         $nombr = $datosC['nombre'];
@@ -26,9 +26,6 @@ class registrarM extends ConexionBD{
 
         $email = mysql_entities_fix_string($cBD,$emai);
         $perfil = mysql_entities_fix_string($cBD,$perfi);
- 
-
-
 
         $password = password_hash($pw_temp, PASSWORD_DEFAULT);
 
@@ -38,7 +35,36 @@ class registrarM extends ConexionBD{
         $result = $cBD->query($query);
         return $result;
     }
+// REGISTRAR ADMINISTRADORES
 
+public function registrarUsuarios1M($datosC){
+    $cBD = $this->conectarBD();
+    $nombr = $datosC['nombre'];
+    $apellid = $datosC['apellido'];
+    $usernam = $datosC['usuario'];
+    $pw_tem = $datosC['contraseña'];
+    $emai = $datosC['email'];
+    $perfi = $datosC['perfil'];
+
+    $nombre = mysql_entities_fix_string($cBD,$nombr);
+    $apellido = mysql_entities_fix_string($cBD,$apellid);
+    $username = mysql_entities_fix_string($cBD,$usernam);
+    $pw_temp = mysql_entities_fix_string($cBD,$pw_tem);
+    $email = mysql_entities_fix_string($cBD,$emai);
+    $perfil = mysql_entities_fix_string($cBD,$perfi);
+
+    $password = password_hash($pw_temp, PASSWORD_DEFAULT);
+
+    $query = "INSERT INTO $this->tablaBD1 VALUES 
+        (NULL,'$nombre','$apellido','$username','$password','$perfil',null,null,null,null,null,1)";
+
+    $result = $cBD->query($query);
+    return $result;
+}
+
+
+
+///////////////////////////////////////////////////////////////
     public function mostrarUsuarioM(){
         $cBD = $this->conectarBD();
         $query = "SELECT *
@@ -62,8 +88,36 @@ class registrarM extends ConexionBD{
         $result = $cBD->query($query);
         return $result;
     }
+//registrar choferes
+    public function registrarChoferM($datosC){
+        $cBD = $this->conectarBD();
 
+        $nombr = $datosC['nombre'];
+        $apellid = $datosC['apellido'];
+        $telefo = $datosC['telefono'];
+        $direcc = $datosC['direccion'];
+        $edad = $datosC['edad'];
+        $gener = $datosC['sexo'];
+        $emai = $datosC['email'];
+        $licen = $datosC['licencia'];
 
+ 
+
+        $nombre = mysql_entities_fix_string($cBD,$nombr);
+        $apellido = mysql_entities_fix_string($cBD,$apellid);
+        $telefono = mysql_entities_fix_string($cBD,$telefo);
+        $direccion = mysql_entities_fix_string($cBD,$direcc);
+        $edad = mysql_entities_fix_string($cBD,$edad);
+        $genero = mysql_entities_fix_string($cBD,$gener);
+        $email = mysql_entities_fix_string($cBD,$emai);
+        $licencia = mysql_entities_fix_string($cBD,$licen);
+
+        $query = "INSERT INTO $this->tablaBD2 VALUES 
+            (NULL,'$nombre','$apellido','$telefono','$direccion','$edad','$genero','$email','$licencia',1)";
+
+        $result = $cBD->query($query);
+        return $result;
+    }
 
 
 /*

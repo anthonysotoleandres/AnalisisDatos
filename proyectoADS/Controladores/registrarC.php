@@ -6,7 +6,7 @@ class registrarC {
 
     public function registrarUsuarioC(){
         if(isset($_POST['nombreRU'])){
-            if($_POST["passwordRU"] === $_POST["ConfipasswordRU"]){
+            if($_POST["passwordRU"] === $_POST["ConfipasswordRU"] and $_POST['perfilRU']=="socio"){
 
                 $datosC =array();
                 $datosC['nombre'] = $_POST['nombreRU'];
@@ -23,11 +23,24 @@ class registrarC {
 
 
             }
-            else{
-            return false;
+            if($_POST["passwordRU"] === $_POST["ConfipasswordRU"] and $_POST['perfilRU']=="administrador"){
+
+                    $datosC =array();
+                    $datosC['nombre'] = $_POST['nombreRU'];
+                    $datosC['apellido'] = $_POST['apellidoRU'];
+                    $datosC['usuario'] = $_POST['usernameRU'];
+                    $datosC['contraseña'] = $_POST['passwordRU'];
+                    $datosC['email'] = $_POST['emailRU'];
+                    $datosC['perfil'] = $_POST['perfilRU'];
+    
+        
+                    $resultado = $this->registrarM->registrarUsuarios1M($datosC);
+                 
+                    header('location: index.php?ruta=RegistroSocio');  
                 }
         }
         return true;
+        
     }
 
     //mostrar empleados
@@ -43,6 +56,31 @@ class registrarC {
     public function mostrarUsuario2C(){
         $resultado = $this->registrarM->mostrarUsuario2M();
         return $resultado;
+    }
+
+    //registrar choferes
+    public function registrarChoferC(){
+        if(isset($_POST['nombreRC'])){
+                $datosC =array();
+                $datosC['nombre'] = $_POST['nombreRC'];
+                $datosC['apellido'] = $_POST['apellidoRC'];
+                $datosC['telefono'] = $_POST['telefonoRC'];
+                $datosC['direccion'] = $_POST['direccionRC'];
+                $datosC['edad'] = $_POST['edadRC'];
+                $datosC['sexo'] = $_POST['sexoRC'];
+                $datosC['email'] = $_POST['emailRC'];
+                $datosC['licencia'] = $_POST['licenciaRC'];
+
+    
+                $resultado = $this->registrarM->registrarChoferM($datosC);
+             
+                header('location: index.php?ruta=RegistroChoferes');
+            }
+            else{
+            return false;
+                }
+        
+        return true;
     }
 
 

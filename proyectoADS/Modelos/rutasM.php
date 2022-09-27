@@ -9,10 +9,12 @@ class RutasM{
             $ruta == 'tareasPendientes' ||
             $ruta == 'tareasprivate' || 
             $ruta == 'RegistroSocio' ||
-            $ruta == 'RegistrarVehiculo' || 
+            $ruta == 'RegistrarVehiculo' ||
+            $ruta == 'RegistroChoferes' || 
             $ruta == 'RegistrarPagos' || 
             $ruta == 'RegistrarPasaje' ||
             $ruta == 'RegistrarObjetosPerdidos' || 
+            $ruta == 'ReporteVehiculo' || 
             $ruta == 'salir' ||
             $ruta == 'perfil' ||
             $ruta == 'editarperfil' ||

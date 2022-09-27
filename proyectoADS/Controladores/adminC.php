@@ -30,7 +30,7 @@ class AdminC{
 
     public function salirC(){
         session_destroy();
-        header("location:index.php?ruta=ingreso");
+        header('location:index.php?ruta=ingreso');
     }
 
     public function sesionIniciadaC(){

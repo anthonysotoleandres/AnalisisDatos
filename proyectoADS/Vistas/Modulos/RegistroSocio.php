@@ -4,41 +4,56 @@ $registrarC->registrarUsuarioC();
 
 ?>
 <div class="row">
-<div class="col s10 push-s1">
+<div class="text-center">
 <div class="container">
-<h4 class="purple-text text-accent-3">Registrar Nuevo Socio</h4>
+<br>
+<h4 class="mb-3">Registrar Nuevo Socio</h4>
 
-<form method="post" action="" id ="forregistrar">
-	<div>
-		<input type="text" placeholder="Nombre" name="nombreRU" required>
-	</div>
-	<div>
-		<input type="text" placeholder="Apellido" name="apellidoRU" required>
-	</div>
-	<div>
-		<input type="text" placeholder="username" name="usernameRU" required>
-	</div>
-	<div>
-		<input type="email" id="email" placeholder="ejemplo@gmail.com" name="emailRU" required>
-	</div>
-	<div>
-		<input type="password" id="contraseña" placeholder="Password" name="passwordRU" required>
-	</div>
-	<div>
-		<input type="password" placeholder="Confirmar Password" name="ConfipasswordRU" required>
-	</div>
-	
-	<div>
-	<h5 class="deep-purple-text text-lighten-1">Perfil</h5>
-        <select name="perfilRU" id="perfil" class="browser-default blue lighten-4 ">
-            <option value="" disabled selected>Seleccionar perfil</option>
-            <option value="administrador">Administrador</option>
-            <option value="socio">Socio</option>
-        </select>
-	</div>
-	<button class="btn waves-effect waves-light" type="submit" name="action">Registrar
-            	</button>
-	</div>
+<form method="post" action="" id ="forregistrar"class="needs-validation">
+   <div class="row g-4">
+      <div class="col-sm-6">
+         <label for="firstName" class="form-label">Nombres</label>
+         <input class="form-control" type="text" placeholder="Nombre" aria-label="default input example" name="nombreRU">           
+      </div>
+      
+      <div class="col-sm-6">
+         <label for="firstName" class="form-label">Apellidos</label>
+         <input class="form-control" type="text" placeholder="Apellido" aria-label="default input example" name="apellidoRU"> 
+            
+      </div>
+      <div class="col-sm-6">
+         <label for="firstName" class="form-label">Usuario</label>
+         <input class="form-control" type="text" placeholder="Usuario" aria-label="default input example" name="usernameRU">
+            
+      </div>
+      <div class="col-sm-6">
+         <label for="firstName" class="form-label">Email</label>
+         <input class="form-control" type="email" placeholder="email" aria-label="default input example" name="emailRU">
+
+      </div>
+      <div class="col-sm-6">
+         <label for="firstName" class="form-label">Constraseña</label>
+         <input class="form-control" type="password" placeholder="Password" aria-label="default input example" name="passwordRU">
+
+      </div >
+      <div class="col-sm-6">
+         <label for="firstName" class="form-label">Confirme la Contraseña</label>
+         <input class="form-control" type="password" placeholder="Confirmar Password" aria-label="default input example" name="ConfipasswordRU">
+
+      </div>
+      
+      <div class="col-sm-6">
+      <h5 class="deep-purple-text text-lighten-1">Perfil</h5>
+         <select  select class="form-select" aria-label="Default select example" name="perfilRU">
+               <option value="" disabled selected>Seleccionar perfil</option>
+               <option value="administrador">Administrador</option>
+               <option value="socio">Socio</option>
+         </select>
+      </div>
+      <button class=" w-auto m-auto btn btn btn-outline-primary btn-sm  " type="submit" name="action">Registrar
+                  </button>
+      </div>
+      </div>
 </form>
 </div>
 </div>
@@ -47,52 +62,3 @@ $registrarC->registrarUsuarioC();
 
 
 
-<script>
-
-$(document).ready(function(){
-   $('#forregistrar').validate({
-      rules: {
-         nombreRU: {
-            required: true,
-            minlength: 5
-         },
-
-         passwordRU: {
-            required: true,
-            minlength: 5
-         },
-         ConfipasswordRU: {
-            required: true,
-            minlength: 5,
-            equalTo: "#contraseña"
-         },
-         email: {
-            required: true,
-            email: true
-         },
-         usernameRU: {
-            required: true,
-            minlength: 5,
-         },
-      },
-      messages: {           
-         nombreRU: {
-            required: "Por favor ingresa tu nombre completo",
-            minlength: "Tu nombre debe ser de no menos de 5 caracteres"
-         },
-         passwordRU: {
-            required: "Por favor ingresa una contraseña",
-            minlength: "Tu contraseña debe ser de no menos de 5 caracteres de longitud"
-         },
-         ConfipasswordRU: {
-            required: "Ingresa un password",
-            minlength: "Tu contraseña debe ser de no menos de 5 caracteres de longitud",
-            equalTo: "Por favor ingresa la misma contraseña de arriba"
-         },
-         email: "Por favor ingresa un correo válido",
-      },
-      
-   });
-});
-
-</script>

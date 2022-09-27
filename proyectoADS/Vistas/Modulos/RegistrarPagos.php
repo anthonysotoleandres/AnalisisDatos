@@ -7,31 +7,36 @@ $tareasC = new registrarC();
 $tareas= $tareasC->mostrarUsuarioC();
 ?>
 <div class="row">
-<div class="col s10 push-s1">
+<div class="text-center">
 <div class="container">
-<h4 class="purple-text text-accent-3">Registrar los Pagos </h4>
+	<br>
+<h4 class="purple-text text-accent-3">Registrar los Pagos de los Socios </h4>
 
-<form method="post" action="" id ="forregistrar">
-    <div>
-	<h5 class="deep-purple-text text-lighten-1">Socio</h5>
-        <select name="socioRP" class="browser-default blue lighten-4 ">
+<form method="post" action="" id ="forregistrar" class="needs-validation">
+<div class="row g-4">
+    <div class="col-sm-6">
+		<label for="firstName" class="form-label">Socios</label>
+        <select name="socioRP" select class="form-select" aria-label="Default select example">
 
         <?php foreach($tareas as $tarea): ?>
             <option value=<?=$tarea['idsocio']?> ><span><?=$tarea['nombre']?></span></option>
          <?php endforeach; ?>
         </select>
 	</div>
-	<div>
-		<input type="text" placeholder="Monto" name="montoRP" required>
+	<div class="col-sm-6">
+		<label for="firstName" class="form-label">Monto a Cancelar</label>
+		<input  class="form-control"type="number" placeholder="Monto" name="montoRP" required>
 	</div>
-	<div>
-		<input type="text"class="datepicker" placeholder="fecha" name="fechaRP" required>
+	<div class="col-sm-6">
+		<label for="firstName" class="form-label">Fecha</label>
+		<input  class="form-control"type="datetime-local"class="datepicker" placeholder="fecha" name="fechaRP" required>
 	</div>
 	<div>
 
 
-	<button class="btn waves-effect waves-light" type="submit" name="action">Registrar
+	<button class="w-auto m-3 btn btn btn-outline-primary btn-sm " type="submit" name="action">Registrar
             	</button>
+	</div>
 	</div>
 </form>
 </div>

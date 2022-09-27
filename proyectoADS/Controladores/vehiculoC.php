@@ -22,8 +22,13 @@ class vehiculoC {
         }
     }
 
+    //mostrar VEHICULOS
+    public function mostrarVehiculoC(){
+        $resultado = $this->vehiculoM->mostrarVehiculoM();
+        return $resultado;
 
 
+    }
 
 
 }
