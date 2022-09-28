@@ -10,12 +10,6 @@ $admi= $choferC->mostrarNumeroAdminC();
 
 ?>
 
-
-	
-
-
-
-    <link href="Vistas\css\nifty-demo-icons.min.css" rel="stylesheet">
 	<br>
 <br>
 	<body>

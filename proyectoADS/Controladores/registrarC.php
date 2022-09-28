@@ -110,6 +110,23 @@ public function mostrarNumeroAdminC(){
     $resultado = $this->registrarM->mostrarNumeroAdminM();
     return $resultado;
 }
+
+// reporte chofer
+public function reporteChoferC(){
+    $resultado = $this->registrarM->reporteChoferM();
+    return $resultado;
+}
+
+// reporte chofer
+public function reporteSociosC(){
+    $resultado = $this->registrarM->reporteSociosM();
+    return $resultado;
+}
+// reporte administrador
+public function reporteAdminC(){
+    $resultado = $this->registrarM->reporteAdminM();
+    return $resultado;
+}
 /*
     //editar empleados
     public function editarTareasC(){

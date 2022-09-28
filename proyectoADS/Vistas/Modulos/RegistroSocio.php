@@ -13,22 +13,22 @@ $registrarC->registrarUsuarioC();
    <div class="row g-4">
       <div class="col-sm-6">
          <label for="firstName" class="form-label">Nombres</label>
-         <input class="form-control" type="text" placeholder="Nombre" aria-label="default input example" name="nombreRU">           
+         <input class="form-control" type="text" placeholder="Nombre" aria-label="default input example" name="nombreRU" required>           
       </div>
       
       <div class="col-sm-6">
          <label for="firstName" class="form-label">Apellidos</label>
-         <input class="form-control" type="text" placeholder="Apellido" aria-label="default input example" name="apellidoRU"> 
+         <input class="form-control" type="text" placeholder="Apellido" aria-label="default input example" name="apellidoRU" required> 
             
       </div>
       <div class="col-sm-6">
          <label for="firstName" class="form-label">Usuario</label>
-         <input class="form-control" type="text" placeholder="Usuario" aria-label="default input example" name="usernameRU">
+         <input class="form-control" type="text" placeholder="Usuario" aria-label="default input example" name="usernameRU" required>
             
       </div>
       <div class="col-sm-6">
          <label for="firstName" class="form-label">Email</label>
-         <input class="form-control" type="email" placeholder="email" aria-label="default input example" name="emailRU">
+         <input class="form-control" type="email" placeholder="email" aria-label="default input example" name="emailRU" required>
 
       </div>
       <div class="col-sm-6">

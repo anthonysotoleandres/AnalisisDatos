@@ -30,7 +30,7 @@ class registrarM extends ConexionBD{
         $password = password_hash($pw_temp, PASSWORD_DEFAULT);
 
         $query = "INSERT INTO $this->tablaBD VALUES 
-            (NULL,'$nombre','$apellido','$username','$password',null,null,null,null,null,null,1,'$perfil')";
+            (NULL,'$nombre','$apellido','$username','$password',null,null,null,null,'$email',null,1,'$perfil')";
 
         $result = $cBD->query($query);
         return $result;
@@ -56,7 +56,7 @@ public function registrarUsuarios1M($datosC){
     $password = password_hash($pw_temp, PASSWORD_DEFAULT);
 
     $query = "INSERT INTO $this->tablaBD1 VALUES 
-        (NULL,'$nombre','$apellido','$username','$password','$perfil',null,null,null,null,null,1)";
+        (NULL,'$nombre','$apellido','$username','$password','$perfil',null,null,null,null,'$email',1)";
 
     $result = $cBD->query($query);
     return $result;
@@ -166,6 +166,35 @@ public function registrarUsuarios1M($datosC){
             $result = $cBD->query($query);
             return $result;
         }
+//reporte chofer
+        public function reporteChoferM(){
+            $cBD = $this->conectarBD();
+    
+            $query = "SELECT nombre,apellido,telefono,direccion,edad,sexo,email,licencia   
+            FROM  $this->tablaBD2";
+            $result = $cBD->query($query);
+            return $result;
+        }
+//reporte chofer --------- falta numero vehiculos
+public function reporteSociosM(){
+    $cBD = $this->conectarBD();
+    $query = "SELECT nombre,apellido,usuario,telefono,direccion,edad,sexo,email 
+    FROM  $this->tablaBD";
+    $result = $cBD->query($query);
+    return $result;
+}
+
+//reporte admin--------- falta numero vehiculos
+public function reporteAdminM(){
+    $cBD = $this->conectarBD();
+    $query = "SELECT nombre,apellido,usuario,telefono,direccion,edad,sexo,email 
+    FROM  $this->tablaBD1";
+    $result = $cBD->query($query);
+    return $result;
+}
+
+
+
 /*
     public function editarTareasM($datosC){
         $cBD = $this->conectarBD();

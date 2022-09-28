@@ -17,6 +17,9 @@ class RutasM{
             $ruta == 'ReporteVehiculo' || 
             $ruta == 'ReportePagos' || 
             $ruta == 'ReporteCronograma' || 
+            $ruta == 'ReporteChoferes' || 
+            $ruta == 'ReporteSocios' || 
+            $ruta == 'ReporteAdmin' || 
             $ruta == 'dashboard' ||
             $ruta == 'salir' ||
             $ruta == 'perfil' ||

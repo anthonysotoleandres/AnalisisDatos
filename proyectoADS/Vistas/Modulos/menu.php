@@ -12,16 +12,17 @@
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
     <a class="navbar-brand col-md-3 col-lg-2 me-0 px-5 fs-6" href="index.php?ruta=dashboard">
     <img class="img-fluid" src="Vistas\Modulos\image (1).png" alt="" width="40" height="40">
-  </a>
+  </a> 
     <div class="navbar-nav">
       <div class="nav-item text-nowrap">
         <a class="nav-link px-5" href="index.php?ruta=salir">Salir</a>
       </div>
     </div>
 </header>
+
 <div class="container-fluid">
   <div class="row">
-    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+    <nav id="sidebarMenu" class="col-md-6 col-lg-2 d-md-block bg-light sidebar collapse">
       <div class="position-sticky pt-3 sidebar-sticky">
         <ul class="nav flex-column">
 
@@ -30,9 +31,9 @@
               Dashboard 
             </a>
           </li>
-          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
+          
           <span>Registro</span>
-          <a class="link-secondary" href="#" aria-label="Add a new report">
+        
             
           </a>
         </h6>
@@ -75,14 +76,11 @@
             </a>
           </li>
         </ul>
-
-        <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
           <span>Reportes</span>
-          <a class="link-secondary" href="#" aria-label="Add a new report">
-           
+    
           </a>
         </h6>
-        <ul class="nav flex-column mb-2">
+        <ul class="nav flex-column">
           <li class="nav-item">
             <a class="nav-link" href="index.php?ruta=ReporteVehiculo">
              
@@ -90,12 +88,14 @@
               Vehiculos
             </a>
           </li>
+          
           <li class="nav-item">
             <a class="nav-link" href="index.php?ruta=ReportePagos">
            
               Pagos
             </a>
           </li>
+
           <li class="nav-item">
             <a class="nav-link" href="index.php?ruta=ReporteCronograma">
 
@@ -103,9 +103,21 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="index.php?ruta=ReporteChoferes">
             
-              Year-end sale
+              Choferes
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="index.php?ruta=ReporteSocios">
+            
+              Socios
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.php?ruta=ReporteAdmin">
+              Administrador
             </a>
           </li>
         </ul>
