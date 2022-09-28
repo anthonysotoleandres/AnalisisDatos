@@ -3,8 +3,6 @@
 $registrarC = new pasajeC();
 $registrarC->registrarpasajeC();
 
-$tareasC = new registrarC();
-$tareas= $tareasC->mostrarUsuario1C();
 ?>
 <div class="row">
 <div class="text-center">
@@ -23,14 +21,7 @@ $tareas= $tareasC->mostrarUsuario1C();
 		<input class="form-control"type="number" placeholder="Precio de ruta 2" name="precio2RP" required>
 	</div>
     <div class="center w-auto m-auto ">
-	<br>	
-	<h5 class="deep-purple-text text-lighten-1">Administrador</h5>
-        <select name="socioRP" class="form-select" aria-label="Default select example">
 
-        <?php foreach($tareas as $tarea): ?>
-            <option value=<?=$tarea['idadministrador']?> ><span><?=$tarea['nombre']?></span></option>
-         <?php endforeach; ?>
-        </select>
 	</div>
 
 

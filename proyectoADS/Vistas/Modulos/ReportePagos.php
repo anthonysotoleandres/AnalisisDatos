@@ -2,24 +2,21 @@
 $adminC = new AdminC();
 $adminC->redirigirSesionC('ingreso');
 
-$empleadosC = new vehiculoC();
-$empleados= $empleadosC->mostrarVehiculoC();
+$empleadosC = new pagosC();
+$empleados= $empleadosC->mostrarPagosC();
 
 
 ?>
 <br>  <!-- Vistas/Modulos/empleados.php -->
-<h3 class="text-center">Reporte de Vehiculos</h3>
+<h3 class="text-center">Reporte de Pagos</h3>
 <br>
 <div class="table-responsive">
 <table class="table table-striped table-sm">
 	<thead>
 		<tr>
-			<th scope="col" >Placa</th>
-			<th scope="col">Color</th>
-			<th scope="col">Marca</th>
-			<th scope="col">Modelo</th>
-			<th scope="col">Tipo de Vehiculo</th>
-			<th scope="col">Propietario</th>
+			<th scope="col" >Monto</th>
+			<th scope="col">Fecha de Pago</th>
+			<th scope="col">Socio</th>
 			<th></th>
 			<th></th>
 		</tr>
@@ -28,11 +25,8 @@ $empleados= $empleadosC->mostrarVehiculoC();
         
 	<?php foreach($empleados as $empleado): ?>
         <tr>
-			<td><?=$empleado['placa']?></td>
-			<td><?=$empleado['color']?></td>
-			<td><?=$empleado['marca']?></td>
-			<td><?=$empleado['modelo']?></td>
-			<td><?=$empleado['tipo_vehiculo']?></td>
+			<td><?=$empleado['monto']?></td>
+			<td><?=$empleado['fecha_pago']?></td>
 			<td><?=$empleado['nombre']?></td>
 			<td>
 				<a href='index.php?ruta=editar&titulo=<?=$empleado['placa']?> class="btn-floating btn-large waves-effect waves-light purple"'>

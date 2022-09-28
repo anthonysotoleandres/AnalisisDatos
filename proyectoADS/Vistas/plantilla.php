@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"> 
     <!-- Custom styles for this template -->
     <link href="Vistas\css\dashboard.css" rel="stylesheet">
+	
 
 </head>
 

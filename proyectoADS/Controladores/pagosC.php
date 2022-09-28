@@ -20,7 +20,11 @@ class pagosC {
         }
     }
 
-
+    //mostrar pagos
+    public function mostrarPagosC(){
+        $resultado = $this->pagosM->mostrarPagosM();
+        return $resultado;
+    }
 
 
 

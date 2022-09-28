@@ -8,13 +8,14 @@ class pasajeM extends ConexionBD{
 
     public function registrarpasajeM($datosC){
         $cBD = $this->conectarBD();
+        $iduser=$_SESSION['Ingreso'];
 
         $precio1 = $datosC['precioRuta1'];
         $precio2 = $datosC['precioRuta2'];
-        $admi = $datosC['administrador_idadministrador'];
+ 
 
         $query = "INSERT INTO $this->tablaBD VALUES 
-            (NULL,'$precio1','$precio2','$admi')";
+            (NULL,'$precio1','$precio2','$iduser')";
 
         $result = $cBD->query($query);
         return $result;

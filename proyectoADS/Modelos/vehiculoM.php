@@ -36,5 +36,15 @@ public function mostrarVehiculoM(){
 }
 
 
+// mostrar numero VEHICULOS
+public function mostrarNumeroVehiculoM(){
+    $cBD = $this->conectarBD();  
+    $iduser=$_SESSION['Ingreso'];
+    $query = "SELECT COUNT(*) as numero FROM  $this->tablaBD ";
+    $result = $cBD->query($query);
+    return $result;
+}
+
+
 
 }

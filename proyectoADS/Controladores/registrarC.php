@@ -82,9 +82,34 @@ class registrarC {
         
         return true;
     }
+//mostrar chofer    
+    public function mostrarChoferC(){
+        $resultado = $this->registrarM->mostrarChoferM();
+        return $resultado;
+    }
+
+    public function mostrarChofer1C(){
+        $resultado = $this->registrarM->mostrarChofer1M();
+        return $resultado;
+    }
 
 
+// numero de chofer
+    public function mostrarNumeroChoferC(){
+        $resultado = $this->registrarM->mostrarNumeroChoferM();
+        return $resultado;
+    }
+// numero de socios
+public function mostrarNumeroSociosC(){
+    $resultado = $this->registrarM->mostrarNumeroSociosM();
+    return $resultado;
+}
 
+// numero de administradores
+public function mostrarNumeroAdminC(){
+    $resultado = $this->registrarM->mostrarNumeroAdminM();
+    return $resultado;
+}
 /*
     //editar empleados
     public function editarTareasC(){

@@ -30,6 +30,14 @@ class vehiculoC {
 
     }
 
+        //mostrar numero de VEHICULOS
+        public function mostrarNumeroVehiculoC(){
+            $resultado = $this->vehiculoM->mostrarNumeroVehiculoM();
+            return $resultado;
+    
+    
+        }
+
 
 }
 

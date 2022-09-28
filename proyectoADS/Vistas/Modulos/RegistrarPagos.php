@@ -25,11 +25,15 @@ $tareas= $tareasC->mostrarUsuarioC();
 	</div>
 	<div class="col-sm-6">
 		<label for="firstName" class="form-label">Monto a Cancelar</label>
-		<input  class="form-control"type="number" placeholder="Monto" name="montoRP" required>
+		<input  class="form-control"type="number" placeholder="S/. Soles" name="montoRP" required>
 	</div>
 	<div class="col-sm-6">
 		<label for="firstName" class="form-label">Fecha</label>
-		<input  class="form-control"type="datetime-local"class="datepicker" placeholder="fecha" name="fechaRP" required>
+			<?php
+				date_default_timezone_set("America/Lima"); // fecha horarioa
+				$hoy = date("dMY", time()); //sacando la fecha
+			?>
+		<input  class="form-control"type="text" value=<?=$hoy?> name="fechaRP" required>
 	</div>
 	<div>
 

@@ -119,7 +119,53 @@ public function registrarUsuarios1M($datosC){
         return $result;
     }
 
+    //mostrar choferes
+    public function mostrarChoferM(){
+        $cBD = $this->conectarBD();
 
+        $query = "SELECT ROW_NUMBER() OVER(ORDER BY idchofer ASC) as Orden,
+                            nombre, apellido
+                    FROM $this->tablaBD2 WHERE mod(idchofer,2) = 0";
+        $result = $cBD->query($query);
+        return $result;
+    }
+
+    public function mostrarChofer1M(){
+        $cBD = $this->conectarBD();
+
+        $query = "SELECT ROW_NUMBER() OVER(ORDER BY idchofer ASC) as Orden,
+                            nombre, apellido
+                    FROM $this->tablaBD2 WHERE mod(idchofer,2) <> 0";
+        $result = $cBD->query($query);
+        return $result;
+    }
+
+
+
+        //numero choferes
+        public function mostrarNumeroChoferM(){
+            $cBD = $this->conectarBD();
+    
+            $query = "SELECT COUNT(*) as numero FROM  $this->tablaBD2";
+            $result = $cBD->query($query);
+            return $result;
+        }
+        //numero choferes
+        public function mostrarNumeroSociosM(){
+            $cBD = $this->conectarBD();
+    
+            $query = "SELECT COUNT(*) as numero FROM  $this->tablaBD";
+            $result = $cBD->query($query);
+            return $result;
+        }
+
+        public function mostrarNumeroAdminM(){
+            $cBD = $this->conectarBD();
+    
+            $query = "SELECT COUNT(*) as numero FROM  $this->tablaBD1";
+            $result = $cBD->query($query);
+            return $result;
+        }
 /*
     public function editarTareasM($datosC){
         $cBD = $this->conectarBD();

@@ -6,7 +6,7 @@ class AdminC{
 
     public function IngresoC(){
         if(isset($_SESSION['Ingreso']))
-            header("location: index.php?ruta=tareas");
+            header("location: index.php?ruta=dashboard");
         if(isset($_POST["usuarioI"])){
             $datosC = array(   
                             "usuario"=>$_POST["usuarioI"], 
@@ -18,7 +18,7 @@ class AdminC{
             if ($resultado){
                 session_start(); 
                 $_SESSION['Ingreso']=$resultado;
-                header("location: index.php?ruta=tareas");
+                header("location: index.php?ruta=dashboard");
             }
             else
             {

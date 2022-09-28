@@ -10,14 +10,15 @@
 <?php else:?>
 
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Logo</a>
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-5 fs-6" href="index.php?ruta=dashboard">
+    <img class="img-fluid" src="Vistas\Modulos\image (1).png" alt="" width="40" height="40">
+  </a>
     <div class="navbar-nav">
       <div class="nav-item text-nowrap">
-        <a class="nav-link px-3" href="index.php?ruta=salir">Salir</a>
+        <a class="nav-link px-5" href="index.php?ruta=salir">Salir</a>
       </div>
     </div>
 </header>
-
 <div class="container-fluid">
   <div class="row">
     <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
@@ -25,8 +26,7 @@
         <ul class="nav flex-column">
 
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.php?ruta=salir">
-              
+            <a class="nav-link active" aria-current="page" href="index.php?ruta=dashboard">             
               Dashboard 
             </a>
           </li>
@@ -91,15 +91,15 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="index.php?ruta=ReportePagos">
            
-              Last quarter
+              Pagos
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-            
-              Social engagement
+            <a class="nav-link" href="index.php?ruta=ReporteCronograma">
+
+              cronograma
             </a>
           </li>
           <li class="nav-item">

@@ -15,6 +15,9 @@ class RutasM{
             $ruta == 'RegistrarPasaje' ||
             $ruta == 'RegistrarObjetosPerdidos' || 
             $ruta == 'ReporteVehiculo' || 
+            $ruta == 'ReportePagos' || 
+            $ruta == 'ReporteCronograma' || 
+            $ruta == 'dashboard' ||
             $ruta == 'salir' ||
             $ruta == 'perfil' ||
             $ruta == 'editarperfil' ||
